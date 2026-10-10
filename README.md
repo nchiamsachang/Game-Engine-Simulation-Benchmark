@@ -1,6 +1,6 @@
 # Game Engine Simulation Benchmark (C# vs Python)
 
-A benchmark by Nathan Chiamsachang for a Principles of Programming Languages class. The assignment was to compare two programming languages, so this project runs the same game-engine-style update loop in C# and in Python to compare how fast each one handles it.
+A benchmark by Nathan Chiamsachang and Trey Rajsombath for a Principles of Programming Languages class. The assignment was to compare two programming languages, so this project runs the same game-engine-style update loop in C# and in Python to compare how fast each one handles it.
 
 ## What it does
 
