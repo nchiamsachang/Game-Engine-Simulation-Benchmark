@@ -98,7 +98,7 @@ def run_simulation():
     
     # RESULTS
     print()
-    print("=== RESULTS ===")
+    print("==== RESULTS ====")
     print(f"Total simulation time: {simulation_time * 1000:.0f} ms")
     print(f"Time per frame: {simulation_time * 1000 / FRAME_COUNT:.3f} ms")
     print(f"Updates per second: {(ENTITY_COUNT * FRAME_COUNT) / simulation_time:,.0f}")
