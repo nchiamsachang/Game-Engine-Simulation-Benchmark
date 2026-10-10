@@ -5,6 +5,8 @@ VisualStudioVersion = 17.8.34511.84
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Minigame", "C#-Minigame\Minigame.csproj", "{4B80856F-D85A-4245-AE1C-ACF8E6674499}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Minigame.Tests", "C#-Minigame.Tests\Minigame.Tests.csproj", "{2387CD5F-B29A-4DFD-8861-FBEB50381B76}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{4B80856F-D85A-4245-AE1C-ACF8E6674499}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4B80856F-D85A-4245-AE1C-ACF8E6674499}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4B80856F-D85A-4245-AE1C-ACF8E6674499}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2387CD5F-B29A-4DFD-8861-FBEB50381B76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2387CD5F-B29A-4DFD-8861-FBEB50381B76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2387CD5F-B29A-4DFD-8861-FBEB50381B76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2387CD5F-B29A-4DFD-8861-FBEB50381B76}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

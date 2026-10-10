@@ -7,4 +7,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <!-- Lets the test project use the Entity class; the program itself is unchanged -->
+    <InternalsVisibleTo Include="Minigame.Tests" />
+  </ItemGroup>
+
 </Project>

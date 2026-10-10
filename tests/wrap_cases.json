@@ -1,0 +1,43 @@
+{
+  "convention": "After moving by its velocity, a coordinate below 0 has 1000 added and a coordinate above 1000 has 1000 subtracted, once per update. Exactly 0 and exactly 1000 are both left as they are.",
+  "cases": [
+    {"name": "inside the area: only the velocity is applied",
+     "x": 500, "y": 250, "vx": 0.5, "vy": -0.25, "expect_x": 500.5, "expect_y": 249.75},
+
+    {"name": "right edge: leaves at 1000 and comes back on the left",
+     "x": 999.5, "y": 500, "vx": 1, "vy": 0, "expect_x": 0.5, "expect_y": 500},
+    {"name": "left edge: leaves at 0 and comes back on the right",
+     "x": 0.5, "y": 500, "vx": -1, "vy": 0, "expect_x": 999.5, "expect_y": 500},
+    {"name": "bottom edge: leaves at 1000 and comes back at the top",
+     "x": 500, "y": 999.5, "vx": 0, "vy": 1, "expect_x": 500, "expect_y": 0.5},
+    {"name": "top edge: leaves at 0 and comes back at the bottom",
+     "x": 500, "y": 0.5, "vx": 0, "vy": -1, "expect_x": 500, "expect_y": 999.5},
+    {"name": "corner: both coordinates wrap in the same update",
+     "x": 999.5, "y": 0.5, "vx": 1, "vy": -1, "expect_x": 0.5, "expect_y": 999.5},
+    {"name": "one coordinate wraps, the other does not",
+     "x": 999.75, "y": 500, "vx": 0.5, "vy": 0.5, "expect_x": 0.25, "expect_y": 500.5},
+
+    {"name": "landing exactly on 1000 does not wrap",
+     "x": 999.5, "y": 999.75, "vx": 0.5, "vy": 0.25, "expect_x": 1000, "expect_y": 1000},
+    {"name": "landing exactly on 0 does not wrap",
+     "x": 0.5, "y": 0.25, "vx": -0.5, "vy": -0.25, "expect_x": 0, "expect_y": 0},
+    {"name": "resting on 1000 stays on 1000",
+     "x": 1000, "y": 1000, "vx": 0, "vy": 0, "expect_x": 1000, "expect_y": 1000},
+    {"name": "resting on 0 stays on 0",
+     "x": 0, "y": 0, "vx": 0, "vy": 0, "expect_x": 0, "expect_y": 0},
+    {"name": "stepping past 1000 from exactly 1000 wraps",
+     "x": 1000, "y": 1000, "vx": 0.25, "vy": 0.5, "expect_x": 0.25, "expect_y": 0.5},
+    {"name": "stepping below 0 from exactly 0 wraps",
+     "x": 0, "y": 0, "vx": -0.25, "vy": -0.5, "expect_x": 999.75, "expect_y": 999.5},
+
+    {"name": "a negative coordinate is brought back into the area",
+     "x": -0.5, "y": -999.5, "vx": 0, "vy": 0, "expect_x": 999.5, "expect_y": 0.5},
+    {"name": "a coordinate just above 1000 is brought back into the area",
+     "x": 1000.5, "y": 1999.5, "vx": 0, "vy": 0, "expect_x": 0.5, "expect_y": 999.5},
+    {"name": "a negative coordinate too small to change 1000 lands exactly on 1000",
+     "x": -1e-18, "y": -1e-18, "vx": 0, "vy": 0, "expect_x": 1000, "expect_y": 1000},
+
+    {"name": "more than one width outside: only one wrap is applied per update",
+     "x": -1500, "y": 2500, "vx": 0, "vy": 0, "expect_x": -500, "expect_y": 1500}
+  ]
+}
